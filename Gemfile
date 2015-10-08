@@ -46,6 +46,9 @@ gem 'roadie-rails', '~> 1.0'
 
 gem 'delayed_job_active_record'
 
+gem 'seo_helper', '~> 1.0'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

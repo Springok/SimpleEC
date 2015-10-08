@@ -6,6 +6,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    set_page_title "#{@product.title}"
+    @page_description = view_context.truncate(@product.description, length: 100 )
   end
 
   def add_to_cart
