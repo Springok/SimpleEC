@@ -1,28 +1,32 @@
-== README
+##摘要
+利用Rails實作開發的電子商務網站，提供商家產品基本管理後台與消費者購買商品功能，並串接第三方支付歐付寶。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##開發環境
+- Ruby 2.2.2
+- Rails 4.2.3
 
-Things you may want to cover:
+##基本功能
 
-* Ruby version
+- 使用者權限(Devise)
+     - 會員註冊後可購買商品
+     - 權限區分一般消費者/商家管理員
+     - 一般消費者可查看自身所有訂單資訊
+     - 商家管理員可做商品上架與訂單狀態管理
 
-* System dependencies
+- 購物車功能
+     - 商品可加入購物車
+     - 購物車內可增減商品數量、刪除個別商品、清空購物車
 
-* Configuration
+- 商品管理後台
+     - 商品資訊包含：文字、數量、價格、圖片
+     - 商品上架功能
 
-* Database creation
+- 訂單管理後台
+     - 訂單資訊包含：下訂時的商品快取資訊、訂購人、寄送地址
+     - 寄送訂單確認信 (Mailgun)
+     - 訂單付款機制(歐付寶)：ATM、超商、信用卡
+     - 訂單狀態管理(aasm)：已下訂、已付款、已出貨、已到貨、訂單取消、退貨
 
-* Database initialization
+##[ERD](https://github.com/Springok/SimpleEC/blob/master/erd.pdf)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##[網站Demo](simple-ec.herokuapp.com)
