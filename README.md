@@ -29,4 +29,4 @@
 
 ##[ERD](https://github.com/Springok/SimpleEC/blob/master/erd.pdf)
 
-##[網站Demo](simple-ec.herokuapp.com)
+##[網站Demo](http://simple-ec.herokuapp.com/)
