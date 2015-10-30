@@ -7,7 +7,8 @@ class OrderPlacingService
   def place_order!
       @order.build_item_cache_from_cart(@cart)
       @order.calculate_total!(@cart)
-      OrderMailer.delay.notify_order_placed(@order)
+      # OrderMailer.delay.notify_order_placed(@order)
+      OrderMailer.notify_order_placed(@order).deliver
       @cart.cart_items.destroy_all
 
   end
